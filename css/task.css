@@ -10,7 +10,7 @@ body {
   font-family: 'Cairo', sans-serif;
   background: #f0f4f8;
   min-height: 100vh;
-  padding: 20px 0;
+  padding: 0px;
 }
 
 /* ===== Header ===== */
@@ -34,7 +34,7 @@ body {
 
 /* ===== شرح verb to be ===== */
 .explain-card { background: white; border-radius: 16px; padding: 30px; margin-bottom: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-.explain-card h2 { text-align: center; font-size: 22px; color: #1a2a5e; margin-bottom: 6px; font-family: Georgia, serif; }
+.explain-card h2 { text-align: center; font-size: 22px; color: #343538; margin-bottom: 6px; font-family: Georgia, serif; }
 .explain-card h3 { text-align: center; font-size: 16px; color: #555; margin-bottom: 20px; }
 .explain-card .desc { background: #f8f9ff; border-right: 4px solid #2d3a8c; padding: 12px 16px; border-radius: 8px; font-size: 14px; color: #333; line-height: 2; margin-bottom: 20px; text-align: right; }
 
@@ -53,7 +53,7 @@ body {
 .contraction-box { background: #f8f9ff; border: 1px solid #c7d2fe; border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
 .contraction-box .arabic-part { color: #555; }
 .contraction-box .english-part { color: #1a2a5e; font-weight: bold; direction: ltr; }
-.contraction-grid.neg .contraction-box { background: #fff5f5; border-color: #fecaca; }
+.contraction-grid.neg .contraction-box { background: #f8f9ff; border-color: #f2f0f0; }
 .contraction-grid.neg .contraction-box .english-part { color: #dc2626; }
 
 /* ===== MCQ quiz ===== */
@@ -140,8 +140,8 @@ body {
 }
 .invalid-feedback {
   color: #dc2626 !important;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
+  background: #f5f5f5;
+  border: 1px solid #d1d5db;
   display: block !important;
 }
 
@@ -154,7 +154,7 @@ body {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 .container .card.ps-3 h3 { font-size: 20px; font-weight: 900; }
-.container .card.ps-3 #count { color: #f0c040; font-size: 24px; }
+.container .card.ps-3 #count { color: #16a34a; font-size: 24px; }
 
 .action-btn {
   width: 100%;
@@ -174,7 +174,7 @@ body {
 
 /* ===== Accordion ===== */
 .accor {
-  background-image: linear-gradient(to right, rgb(93, 93, 176), rgb(81, 56, 205));
+  background-image: linear-gradient(to right, #364e96, #2d3a8c);
   color: white;
   font-size: 21px;
   font-weight: 700;
@@ -182,11 +182,81 @@ body {
   padding: 30px;
   border-radius: 25px;
 }
-
+.accordion-button::after{
+  filter: brightness(0) saturate(100%) invert(1);
+}
 /* ===== Footer ===== */
 .footer {
   text-align: center;
   border-top: 1px solid rgb(189, 185, 185);
   padding-top: 70px;
   margin-top: 40px;
+}
+/* تابلت */
+@media (max-width: 768px) {
+  .header { padding: 22px 14px 16px; }
+  .header h1 { font-size: 30px; letter-spacing: 1px; }
+  .header p { font-size: 15px; }
+ 
+  .tabs { padding: 0 12px;   }
+  .tab-btn { padding: 10px 16px; font-size: 13px; }
+ 
+  .content { margin: 18px auto; padding: 0 10px; }
+ 
+  .explain-card { padding: 18px 14px; border-radius: 12px; }
+  .explain-card h2 { font-size: 19px; }
+  .explain-card h3 { font-size: 14px; }
+  .explain-card .desc { font-size: 13px; line-height: 1.8; padding: 10px 12px; }
+ 
+  .section-title { font-size: 15px; padding: 7px 14px; }
+ 
+  .verb-table { font-size: 12.5px; }
+  .verb-table th { padding: 7px 4px; font-size: 12px; }
+  .verb-table td { padding: 7px 6px; }
+  .verb-table .verb { font-size: 14px; }
+  .verb-table .arabic { font-size: 11px; }
+ 
+  .contraction-box { padding: 8px 10px; font-size: 12px; }
+ 
+  .card { padding: 18px 14px; border-radius: 12px; }
+  .card .text { font-size: 15px; }
+ 
+  .card .btn { padding: 8px 18px; font-size: 13px; }
+ 
+  .accor { padding: 18px; font-size: 16px; border-radius: 16px; }
+ 
+  .footer { padding-top: 40px; margin-top: 24px; }
+}
+ 
+/* موبايل */
+@media (max-width: 480px) {
+  .header h1 { font-size: 24px; }
+  .header p { font-size: 13px; }
+ 
+  .tab-btn { padding: 9px 10px; font-size: 12px; }
+ 
+  .explain-card h2 { font-size: 16px; }
+  .explain-card h3 { font-size: 12px; }
+  .explain-card .desc { font-size: 12px; }
+ 
+  /* الجدول: نخليه scrollable افقيًا بدل ما ينضغط ويبوظ */
+  .verb-table { display: block; overflow-x: auto; white-space: nowrap; margin-left: 10px; }
+  .verb-table th, .verb-table td { font-size: 11px; padding: 6px 12px; }
+ 
+  /* التقسيمات (contractions) عمود واحد بدل عمودين */
+  .contraction-grid { grid-template-columns: 1fr; gap: 8px; }
+  .contraction-box { flex-wrap: wrap; }
+  .contraction-box .arabic-part,
+  .contraction-box .english-part { font-size: 12px; }
+ 
+  .card { padding: 14px 12px; }
+  .card .text { font-size: 13.5px; letter-spacing: 0; word-spacing: 0; }
+  .card .btn { width: 100%; margin-bottom: 8px; padding: 10px; font-size: 13px; }
+ 
+  .container .card.ps-3 h3 { font-size: 16px; }
+  .container .card.ps-3 #count { font-size: 20px; }
+ 
+  .action-btn { font-size: 14px; padding: 12px; }
+ 
+  .accor { padding: 14px; font-size: 14px; border-radius: 12px; }
 }

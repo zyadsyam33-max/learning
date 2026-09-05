@@ -3,13 +3,6 @@
     padding: 0px;
     box-sizing: border-box;
 }
-/* .image-Home{
-    background-image: url(../images/classroom_HD.jpg);
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
     :root {
       --navy:    #1A2E5A;
       --orange:  #FF6B35;
@@ -335,59 +328,6 @@
       margin: 0 auto;
       line-height: 1.7;
     }
-
-    /* .grades-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 22px;
-      max-width: 1200px;
-      margin: 0 auto;
-    } */
-
-    /* grade card = big button */
-    /* .grade-card {
-      position: relative;
-      border-radius: 18px;
-      padding: 32px 28px;
-      cursor: pointer;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      transition: transform .22s cubic-bezier(.34,1.56,.64,1), box-shadow .22s;
-      overflow: hidden;
-      border: none;
-      outline: none;
-    }
-
-    .grade-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,.08);
-      opacity: 0;
-      transition: opacity .2s;
-    }  
-      */
-    
-
-    /* .grade-card:hover { transform: translateY(-6px) scale(1.02); }
-    .grade-card:hover::before { opacity: 1; }
-    .grade-card:hover .card-arrow { transform: translateX(-6px); } */
-
-    /* individual grade colors */
-    /* .grade-card:nth-child(1)  { background: linear-gradient(135deg, #FF6B35, #ff8c60); box-shadow: 0 8px 30px rgba(255,107,53,.30); }
-    .grade-card:nth-child(2)  { background: linear-gradient(135deg, #2EC4B6, #5fd8d0); box-shadow: 0 8px 30px rgba(46,196,182,.28); }
-    .grade-card:nth-child(3)  { background: linear-gradient(135deg, #8B5CF6, #a78bfa); box-shadow: 0 8px 30px rgba(139,92,246,.28); }
-    .grade-card:nth-child(4)  { background: linear-gradient(135deg, #FFD23F, #ffe070); box-shadow: 0 8px 30px rgba(255,210,63,.30); }
-    .grade-card:nth-child(5)  { background: linear-gradient(135deg, #EF4444, #f87171); box-shadow: 0 8px 30px rgba(239,68,68,.28); }
-    .grade-card:nth-child(6)  { background: linear-gradient(135deg, #3B82F6, #60a5fa); box-shadow: 0 8px 30px rgba(59,130,246,.28); }
-    .grade-card:nth-child(7)  { background: linear-gradient(135deg, #10B981, #34d399); box-shadow: 0 8px 30px rgba(16,185,129,.28); }
-
-    .grade-card:nth-child(4) .card-label,
-    .grade-card:nth-child(4) .card-title,
-    .grade-card:nth-child(4) .card-desc,
-    .grade-card:nth-child(4) .card-arrow { color: var(--navy) !important; } */
   :root{
     --navy: #10193a;
     --navy-2: #17224d;
@@ -401,9 +341,6 @@
     --radius-card: 20px;
     --radius-pill: 999px;
   }
- 
-
- 
   /* ===== Header ===== */
   .site-header{
     background: var(--navy);
@@ -562,8 +499,6 @@
  /* .theme-green   .card-icon-wrap{ background:#ece3fb; }
     .theme-purple .card-icon-wrap{ background:#fde3e9; }
    .theme-pink .card-icon-wrap{ background:#dcecfb; } */
-
- 
   .card-label{
     font-size: 0.85rem;
     font-weight: 700;
@@ -654,7 +589,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr ;
       gap: 70px;
-      /* padding-bottom: 50px; */
        border-bottom: 1.1px solid rgba(255,255,255,.1);
     }
     .footer-brand .logo-row {
